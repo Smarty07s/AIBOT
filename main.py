@@ -1,9 +1,11 @@
 import nltk
-from nltk.tokenize import sent_tokenize
+from nltk.tokenize import sent_tokenize,word_tokenize
 
 
 query = str(input("Query: "))
 
-senttok = sent_tokenize(query)
+sent_tok = sent_tokenize(query)
+word_tok = word_tokenize(query)
 
-print(senttok)
+
+print(sent_tok,word_tok)
