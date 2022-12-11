@@ -9,4 +9,6 @@ word_tok = word_tokenize(query)
 # print(stopwords.words('english'))
 
 
-print(sent_tok,word_tok)
+file =open('text','r')
+
+ 
