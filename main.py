@@ -1,4 +1,5 @@
 import nltk
+import os
 from nltk.tokenize import sent_tokenize,word_tokenize
 from  nltk.corpus import stopwords
 
@@ -8,7 +9,5 @@ sent_tok = sent_tokenize(query)
 word_tok = word_tokenize(query)
 # print(stopwords.words('english'))
 
-
-file =open('text','r')
-
+print(os.system('notepad'))
  
