@@ -1,7 +1,7 @@
 import os
 
 
-
+os.system('git init')
 os.system('git remote set-url origin https://github.com/Smarty07s/AIBOT.git')
 os.system('git add *')
 commit = input('Commit desc: ')
