@@ -31,10 +31,10 @@ class abcd():
 
         return tfidf
             
+f = []
+for l in ['corp/raw/doc0.txt','corp/raw/doc1.txt','corp/raw/doc2.txt']:
+    d = open(l,'r')
+    r = word_tokenize(d.read())
+    f.append(r)
+print(abcd().tfidf('and',f))
 
-
-d = open('functions/doc0.txt','r')
-r = word_tokenize(d.read())
-print(abcd().tfidf('and',[r,]))
-
-time.sleep(6.0)
