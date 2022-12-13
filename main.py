@@ -11,10 +11,11 @@ word_tok = word_tokenize(query)
 # print(stopwords.words('english'))
 
 b = 2
-for i in range(b):
+i = 0
+while (True):
     if os.path.exists(f'corp/raw/doc{i}.txt') == True:
         print(True)
-        b += 1
+        i += 1
     elif os.path.exists(f'corp/raw/doc{i}.txt') == False:
         print(False)
         document = open(f'corp/raw/doc{i}.txt', 'w')

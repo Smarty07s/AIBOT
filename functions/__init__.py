@@ -1,3 +1,9 @@
+import time
+from nltk.tokenize import sent_tokenize,word_tokenize
+from math import log
+
+
+
 def createf(filename , data):
     with open(filename,'w'):
         f = open(filename,'w')
@@ -6,15 +12,29 @@ def createf(filename , data):
 
 class abcd():
     def __init__(self) -> None:
-        return None
+        pass
     
-    def tfidf(self,word,documents):
-        for i in documents:
-            d = open(i,'r')
-            r = list(d.read())
-            for a in r:
-                if word in r:
-                    print(word)
-                print(a)
+    def tfidf(self,word,text):
+        b = 0
+        e = len(text)
+        for c in text:
+            for a in c:
 
-print(abcd().tfidf('and',['doc0.txt']))
+                if word == a:
+                    ret = True
+                else:
+                    ret = False
+                if ret == True:
+                    b = b+1
+
+            tfidf = log(b)/e
+
+        return tfidf
+            
+
+
+d = open('functions/doc0.txt','r')
+r = word_tokenize(d.read())
+print(abcd().tfidf('and',[r,]))
+
+time.sleep(6.0)
